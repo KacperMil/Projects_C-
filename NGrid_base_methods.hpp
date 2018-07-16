@@ -39,7 +39,6 @@ void NGrid<T, 1>::CopyFrom(const NGrid<T, 1> & t)
 	/*
 	ta funkcja s³u¿y tylko do kopiowania, ewentualne czyszczenie pamiêci znajduje siê na zewn¹trz funkcji
 	*/
-
 	mSize = t.mSize;//nowy rozmiar
 	mElements = new T[mSize]; //tyle samo wierszy co "t", 
 	int i;
@@ -50,10 +49,10 @@ void NGrid<T, 1>::CopyFrom(const NGrid<T, 1> & t)
 	}
 	catch (...) //³apanie jakichkolwiek wyj¹tków
 	{
-		for (int j = 0; j < i; j++)
+		/*for (int j = 0; j < i; j++)
 		{
 			delete mElements[j]; //usuwanie poszczególnych elementów
-		}
+		}*/
 		delete[] mElements; //usuniêcie ca³ej tablicy
 		//zerowanie pocz¹tkowych wartoœci, aby ³atwiej by³o destruktorowi:
 		mElements = nullptr;

@@ -93,6 +93,7 @@ void Swap(T &x, T &y)
 }
 
 
+
 //seperation of odds and events:
 template<typename T>
 void SeperationOfOddsAndEvents(const T myArray[], int  size, T*& OddArray, T*& EvenArray)
@@ -121,12 +122,6 @@ void SeperationOfOddsAndEvents(const T myArray[], int  size, T*& OddArray, T*& E
 			OddNumb++;
 		}
 	}
-}
-
-
-void myF(const int t)
-{
-
 }
 
 #endif // !HEADER1_HPP
